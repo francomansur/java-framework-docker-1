@@ -85,30 +85,3 @@ docker compose up -d --build --force-recreate
 | Senha root   | teste     |
 
 > Dentro do código Java, use `mysql` como host (nome do serviço no Docker), não `localhost`.
-
----
-
-## Comandos Úteis
-
-```bash
-# Ver logs do Tomcat
-docker logs tomcat-app
-
-# Ver logs do MySQL
-docker logs mysql-db
-
-# Ver logs do phpMyAdmin
-docker logs phpmyadmin
-
-# Ver status dos containers
-docker ps
-
-# Acessar MySQL pelo terminal
-docker exec -it mysql-db mysql -uteste -pteste teste
-
-# Ver arquivos deployados no Tomcat
-docker exec tomcat-app ls /usr/local/tomcat/webapps/
-
-# Parar e apagar tudo (inclusive dados do MySQL)
-docker compose down -v
-```
