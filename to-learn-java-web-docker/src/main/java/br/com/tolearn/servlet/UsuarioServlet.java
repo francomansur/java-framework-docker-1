@@ -1,9 +1,11 @@
-package br.com.tolearn;
+package br.com.tolearn.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import br.com.tolearn.DatabaseConnection;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -35,4 +37,5 @@ public class UsuarioServlet extends HttpServlet {
             out.println("<p>Erro no banco de dados: " + e.getMessage() + "</p>");
         }
     }
+    
 }

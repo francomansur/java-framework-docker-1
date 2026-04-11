@@ -17,4 +17,8 @@ public class ConfiguracaoGlobal {
         }
         return instance;
     }
+
+    public void getDbInfo() {
+        System.out.println("URL: " + this.dbUrlCompleta + ", Porta: " + this.porta + ", Timeout: " + this.timeout);
+    }
 }
