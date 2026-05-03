@@ -1,4 +1,4 @@
-package br.com.tolearn.servlet;
+package br.com.tolearn.controller.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

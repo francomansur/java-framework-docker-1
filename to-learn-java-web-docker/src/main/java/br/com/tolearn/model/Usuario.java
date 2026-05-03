@@ -1,0 +1,37 @@
+package br.com.tolearn.model;
+
+import br.com.tolearn.dao.Mapeavel;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Usuario implements Mapeavel {
+    private Long id;
+    private String login;
+    private String senha;
+
+    public Usuario() {
+    }
+
+    public Usuario(Long id, String login, String senha) {
+        this.id = id;
+        this.login = login;
+        this.senha = senha;
+    }
+
+    @Override
+    public void preencher(ResultSet rs) throws SQLException {
+        this.id = rs.getLong("id");
+        this.login = rs.getString("login");
+        this.senha = rs.getString("senha");
+    }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getLogin() { return login; }
+    public void setLogin(String login) { this.login = login; }
+
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
+}
